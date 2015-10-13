@@ -1,0 +1,69 @@
+<?php include "vues/globals/header.phtml";?>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+                
+                <!-- Blog Post -->
+                <div class="blog-entry">
+
+
+                    <!-- Title -->
+                    <h1><?php echo $article['titre'] ?></h1>
+
+                    <!-- Date/Time -->
+                    <p><span class="glyphicon glyphicon-time"></span> Article posté le <?php echo $article['dateArticle'] ?></p>
+
+                    <hr>
+
+                    <!-- Preview Image -->
+                    <div  style="float:left;" class='shareaholic-canvas' data-app='share_buttons' data-app-id='19426281'></div>
+                    <img class="img-responsive" src="<?php echo ROOT_IMG.$article['image'] ?>" alt="">
+
+                    <hr>
+
+                    <p class="lead"><?php echo $article['description'] ?></p>
+                </div>
+                <div class="well">
+                    <h4>Laisser un commentaire:</h4>
+                    <form class="form-group" role="form" method="POST">
+                        <input  name="autor" value="Votre nom?">         
+                        <div name="note" class="form-group" id="stars"></div>
+                        
+                        <div class="form-group">
+                            <textarea name="comment" class="form-control" rows="3" placeholder="Commentaire"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                </div>
+
+                <hr>
+
+                <!-- Comment -->
+                <?php if($commentaires):?>
+                <?php foreach ($commentaires as $key => $value):?>
+                <div class="media well">
+                        <div class="media-body">
+                            <h4 class="media-heading"><?php echo htmlentities($value['auteur']) ?>
+                                <div class="starcom" data-score="<?php echo $value['note']?>"></div>
+                                <small><?php echo $value['dateCommentaire']; ?></small>
+                            </h4>
+                            <?php echo htmlentities($value['contenu']) ?>
+                        </div>
+                </div>
+                <?php endforeach?>
+            <?php endif;?>
+
+            </div>
+
+            <?php include "vues/globals/sidebar.phtml";?>         
+
+        </div>
+
+        <hr>
+
+        <?php include "vues/globals/footer.phtml";?>   

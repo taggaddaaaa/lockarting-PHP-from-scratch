@@ -1,0 +1,34 @@
+<div class="col-md-4">
+
+    <!-- Blog Categories Well -->
+    <div class="well" style="margin-top: 30px; padding-top: 50px;">
+        <h4><a style="color: inherit;" href="index.php?page=categories">Blog Categories</a></h4>
+        <div class="row">
+            <div class="col-lg-6">
+                <ul class="list-unstyled">
+                    <?php foreach($categories as $cat){
+                        echo "<li><a href=\"index.php?page=unecategorie&id=".$cat['id']."\">".$cat['titre']."</a></li>";
+                    } ?>
+                </ul>
+            </div>
+            <!-- /.col-lg-6 -->
+        </div>
+        <!-- /.row -->
+    </div>
+
+    <!-- Side prochain evenement -->
+    <div class="well">
+        <h4>Prochain Evènement</h4>
+        <!-- ?php foreach ($variable as $key => $value) {
+            echo " -->
+            <p>Le 15 aout 2015, Loc'karting organise une spéciale nocturne. Venez vous essayer aux joies du karting dans une toute autre ambiance. <br>
+            Réservez-vite <a class="page-scroll" href="#contact">ICI</a></p>
+    </div>
+
+    <div class="well">
+        <h4>Boutique</h4>
+        <p>Offrez du Karting ou faites vous plaisir, en commandant en ligne vos sessions karting.</p>
+        <a title="Logiciel billetterie en ligne" href="http://www.weezevent.com//?c=sys_widget" class="weezevent-widget-integration" target="_blank" data-src="https://www.weezevent.com/widget_billeterie.php?id_evenement=127600&amp;code=32646&amp;resize=1&amp;width_auto=1&amp;color_primary=fed136" data-width="650" data-height="600" data-id="127600" data-resize="1" data-width_auto="1" data-noscroll="0" data-nopb="0">Billetterie Weezevent</a><script type="text/javascript" src="https://www.weezevent.com/js/widget/min/widget.min.js"></script>
+
+    </div>
+</div>

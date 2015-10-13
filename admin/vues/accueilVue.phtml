@@ -1,0 +1,57 @@
+<?php include "vues/globals/header.phtml";?>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+<!-- XX ICI JE FAIS UNE BOUCLE AUTOUR DES ARTICLES QUI SE REPETENT AVC UN FOREACH; ET JE FAIS DES ECHOS DES DONNEES DE MA BDD DANS LES BALISES CORRESPONDANTES -->
+                <?php foreach ($articles as $key => $value):?>
+                <!-- Blog Post -->
+                <?php //echo $articles ?>
+                <div  style="padding-top: 50px;" class="blog-entry">
+                    <h2>
+                        <a href="index.php?page=article&id=<?=$value['id']?>"><?php echo $value['titre'] ?></a>
+                    </h2>
+                    <p><span class="glyphicon glyphicon-time"></span> Posté le <?php echo $value['dateArticle'] ?></p>
+                    <hr>
+                    <img class="img-responsive" src="<?php echo ROOT_IMG.$value['image'] ?>" alt="">
+                    <hr>
+                    <p><?php echo substr($value['description'], 0, 150); ?> (...)</p>
+                    <hr>
+                    <a class="btn btn-primary" href="index.php?page=article&id=<?=$value['id']?>">Lire plus... <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+                <?php endforeach?>
+<!-- XX FIN DE MA BOUCLE ARTICLES -->
+                
+
+
+
+                <!-- Pager -->
+                <ul class="pager">
+                    <?php if ($prevpage >= 0) { ?>
+                        <li class="previous">
+                            <a href="index.php?pagination=<?php echo $prevpage; ?>">&larr; + vieux</a>
+                        </li>
+                    <?php } ?>
+                    <?php if ($nextpage >= 0) { ?>
+                        <li class="next">
+                            <a href="index.php?pagination=<?php echo $nextpage; ?>">+ récents &rarr;</a>
+                        </li>
+                    <?php } ?>
+                </ul>
+
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+<?php include "vues/globals/sidebar.phtml";?>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+<?php include "vues/globals/footer.phtml";?>       

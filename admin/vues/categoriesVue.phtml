@@ -1,0 +1,29 @@
+<?php
+include "vues/globals/header.phtml";?>
+
+
+<div class="container">
+  <div class="row row-offcanvas row-offcanvas-right">
+    <div class="col-xs-12 col-sm-12">
+      <p class="pull-right visible-xs">
+        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+      </p>
+      <div style ="padding-top: 70px;" class="jumbotron">
+        <h1>Catégories</h1>
+        <p>Ici vous pouvez retrouver toutes les catégories de nos articles pour mieux vous y retrouver.</p>
+      </div>
+      <div class="row">
+        <?php foreach ($categorie as $key => $value):?>
+        <div class="col-xs-6 col-lg-4">
+          <h2><?php echo $value['titre'] ?></h2>
+          <p><?php echo $value['description'] ?> </p>
+          <p><a class="btn btn-primary" href="index.php?page=unecategorie&id=<?php echo $value['id'] ?>" role="button">View details »</a></p>
+        </div>
+        <?php endforeach?>
+      
+      </div><!--/row-->
+    </div>
+  </div>
+</div>
+
+<?php include "globals/footer.phtml";?>

@@ -1,0 +1,41 @@
+<?php include "vues/globals/header.phtml";?>
+
+<div class="container">
+
+  <form class="form-signin" method="POST" enctype="multipart/form-data">
+    <h2 class="form-signin-heading">Ajouter un article</h2>
+
+    <label for="inputEmail" class="sr-only">Titre de l'article</label>
+    <input type="text" name="titre" id="inputEmail" class="form-control"placeholder="Titre de l'article">
+
+    <label for="inputEmail" class="sr-only">Description de l'article</label>
+    <textarea name="description" class="form-control" placeholder="Description de l'article"></textarea>
+
+    <label for="inputPassword" class="sr-only">date</label>
+    <input name="date" type="date" class="form-control" placeholder="Date">
+
+    <label for="inputPassword" class="sr-only">Auteur</label>
+    <input name="auteur" class="form-control" placeholder="Auteur">
+
+    
+    <div class="form-group">
+    <label for="exampleInputFile">Img input</label>
+    <input type="file"  name="image" id="exampleInputFile">
+    <p class="help-block">Upload des fichiers images en jpeg!</p>
+    </div>
+
+    <select name="categories" class="form-control input-sm">
+      <?php foreach ($categories as $key => $value):?>
+      <option value="<?php echo $value['id'] ?>"><?php echo $value['titre']?></option>
+    <?php endforeach?>
+    </select>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Valider
+    </button>
+  </form>
+</div> 
+
+<hr>
+
+
+<?php include "globals/footer.phtml";?>

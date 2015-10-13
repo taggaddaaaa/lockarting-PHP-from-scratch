@@ -1,0 +1,47 @@
+<?php
+include "globals/header.phtml";?>
+
+
+<div class="container">
+
+<!-- Jumbotron Header  -->
+<?php foreach ($categorieParticuliere as $key => $value):?>	
+	<header class="jumbotron hero-spacer" >
+		<h1 style="color:#fed136"><?php echo $value['titre'] ?></h1>
+		<p style="color:#fed136"><?php echo $value['description'] ?></p>
+		
+	</header>
+<?php endforeach?>
+	<hr>
+
+	<!-- Title -->
+	<div class="row">
+		<div class="col-lg-12">
+			<h3>Les dernières news:</h3>
+		</div>
+	</div>
+	<!-- /.row -->
+<?php foreach ($articlesCategorie as $key => $value):?>
+	<!-- Page Features -->
+	<div class="row text-center">
+
+		<div class="col-md-3 col-sm-6 hero-feature">
+			<div class="thumbnail">
+				<img src="<?php echo ROOT_IMG.$value['image'] ?>" alt="">
+				<div class="caption">
+					<h3><?php echo $value['titre'] ?></h3>
+					<p><?php echo $value['description'] ?></p>
+					<p>
+						<a href="index.php?page=article&id=<?=$value['id']?>" class="btn btn-primary">Lire plus</a>
+					</p>
+				</div>
+			</div>
+		</div>
+<?php endforeach?>
+
+
+</div>
+        <!-- /.row -->
+<hr>
+
+<?php include "globals/footer.phtml";?>

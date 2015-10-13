@@ -1,0 +1,21 @@
+<?php include "vues/globals/header.phtml";?>
+<div class="container">
+
+  <form class="form-signin" method="POST" novalidate>
+    <h2 class="form-signin-heading">Se connecter</h2>
+    <label for="inputEmail" class="sr-only">Adresse Email</label>
+    <input type="email" name="email" id="inputEmail" class="form-control"placeholder="Email address" required autofocus>
+    <label for="inputPassword" class="sr-only">Mot de passe</label>
+    <input type="password" name="mdp" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"> Se souvenir de moi
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Se connecter </button>
+    <p> Nouveau?: <a href="index.php?page=compte"> Créer un compte</a></p>
+  </form>
+  
+</div> <!-- /container -->
+
+<?php include "vues/globals/footer.phtml";?> 

@@ -364,7 +364,7 @@ if(!empty($_POST))
             </div>
             <div class="row">
                 <div class="col-lg-12" id="mc_embed_signup">
-                    <form action="//lockarting.us11.list-manage.com/subscribe/post?u=4b0e4daf2e610870f7b8f179d&amp;id=44879ae741" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <form action="http://lockarting.us11.list-manage.com/subscribe/post?u=4b0e4daf2e610870f7b8f179d&amp;id=44879ae741" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                         <div class="row" id="mc_embed_signup_scroll">
                             <div class="col-md-6">
                                 <div class="form-group mc-field-group">

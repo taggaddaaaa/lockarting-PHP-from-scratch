@@ -101,29 +101,8 @@ if(!empty($_POST))
 
     <!-- mailchimp -->
     <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-
-
-    <!-- script shareaholic ds chaque page! -->
-    <script type="text/javascript">
-    //<![CDATA[
-      (function() {
-        var shr = document.createElement('script');
-        shr.setAttribute('data-cfasync', 'false');
-        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
-        shr.type = 'text/javascript'; shr.async = 'true';
-        shr.onload = shr.onreadystatechange = function() {
-          var rs = this.readyState;
-          if (rs && rs != 'complete' && rs != 'loaded') return;
-          var site_id = 'edd7c50d40812a89619b7ed435fc5432';
-          try { Shareaholic.init(site_id); } catch (e) {}
-        };
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(shr, s);
-      })();
-    //]]>
-    </script>
-
-
+    <!--logo dans la barre de navigation-->
+    <link href='img/logo.png' rel='shortcut icon'><link href='img/logo.png' rel='apple-touch-icon'>
 
 </head>
 
@@ -411,13 +390,14 @@ if(!empty($_POST))
                                     </div>
                                 </div>
                                 <!-- POUR LES ROBOTS -->
-                                <div id="mce-responses" class="clear">
+                               <div id="mce-responses" class="clear">
                                     <div class="response" id="mce-error-response" style="display:none"></div>
                                     <div class="response" id="mce-success-response" style="display:none"></div>
                                 </div>
-
+                                <!-- <div style="position: absolute; left: -5000px;"><input type="text" name="b_4b0e4daf2e610870f7b8f179d_44879ae741" tabindex="-1" value=""></div>
+ -->
                                 <div class="clear">
-                                    <input type="submit" value="Envoi" name="subscribe" id="mc-embedded-subscribe" class="btn btn-xl" />
+                                    <input type="submit" value="Souscrire" name="subscribe" id="mc-embedded-subscribe" class="btn btn-xl" />
                                 </div>
                             </div>
                         </div>
@@ -564,7 +544,7 @@ if(!empty($_POST))
                             <a target="_blank" href="https://plus.google.com/109144128606618517906/posts"><i class="fa fa-google-plus"></i></a>
                         </li>                            
                         <li>
-                            <a target="_blank" href="http://www.facebook.com/lockarting"><i class="fa fa-facebook"></i></a>
+                            <a target="_blank" href="http://facebook.com/circuit.lockarting"><i class="fa fa-facebook"></i></a>
                         </li>
                         <li>
                             <a target="_blank" href="https://fr.linkedin.com/pub/jean-marie-caizergues/64/754/321"><i class="fa fa-linkedin"></i></a>
@@ -613,7 +593,7 @@ if(!empty($_POST))
                                 <p class="item-intro text-muted">Est-ce que votre circuit préféré est ouvert?</p>
                                 <img class="img-responsive img-centered" style="width: 20%" src="img/horloge.jpg" alt="">
                                 <p>Le circuit est ouvert <strong>du MERCREDI au VENDREDI de 14h00 à 18h30 et le week-end de 10h00 à 19h00.</strong> </br>
-                                    Pendant les <strong> vacances scolaires</strong>, nous sommes ouverts <strong> tous les jours de 10h00 à 18h30</strong>.</br>
+                                    Pendant les <strong> vacances scolaires</strong>, nous sommes ouverts <strong> tous les jours de 14h00 à 18h30</strong>.</br>
                                     Nous sommes fermés au mois de janvier pour nos congés annuels. </br>
                                     Nous sommes fermés en cas de météo ne permettant pas la pratique sur circuit.</p>
                                 <p>
@@ -957,29 +937,30 @@ if(!empty($_POST))
             <script src="js/agency.js"></script>
 
             <!-- script mailchimp -->
-            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='BIRTHD';ftypes[4]='birthday';fnames[3]='GENDER';ftypes[3]='radio';fnames[5]='MMERGE5';ftypes[5]='radio'; /*
-             * Translated default messages for the $ validation plugin.
-             * Locale: FR
-             */
-             $.extend($.validator.messages, {
-                required: "Ce champ est requis.",
-                remote: "Veuillez remplir ce champ pour continuer.",
-                email: "Veuillez entrer une adresse email valide.",
-                url: "Veuillez entrer une URL valide.",
-                date: "Veuillez entrer une date valide.",
-                dateISO: "Veuillez entrer une date valide (ISO).",
-                number: "Veuillez entrer un nombre valide.",
-                digits: "Veuillez entrer (seulement) une valeur numérique.",
-                creditcard: "Veuillez entrer un numéro de carte de crédit valide.",
-                equalTo: "Veuillez entrer une nouvelle fois la même valeur.",
-                accept: "Veuillez entrer une valeur avec une extension valide.",
-                maxlength: $.validator.format("Veuillez ne pas entrer plus de {0} caractères."),
-                minlength: $.validator.format("Veuillez entrer au moins {0} caractères."),
-                rangelength: $.validator.format("Veuillez entrer entre {0} et {1} caractères."),
-                range: $.validator.format("Veuillez entrer une valeur entre {0} et {1}."),
-                max: $.validator.format("Veuillez entrer une valeur inférieure ou égale à {0}."),
-                min: $.validator.format("Veuillez entrer une valeur supérieure ou égale à {0}.")
-            });}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {
+             window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='BIRTHD';ftypes[4]='birthday';fnames[3]='GENDER';ftypes[3]='radio';fnames[5]='MMERGE5';ftypes[5]='radio'; /*
+            * Translated default messages for the $ validation plugin.
+            * Locale: FR
+            */
+            $.extend($.validator.messages, {
+               required: "Ce champ est requis.",
+               remote: "Veuillez remplir ce champ pour continuer.",
+               email: "Veuillez entrer une adresse email valide.",
+               url: "Veuillez entrer une URL valide.",
+               date: "Veuillez entrer une date valide.",
+               dateISO: "Veuillez entrer une date valide (ISO).",
+               number: "Veuillez entrer un nombre valide.",
+               digits: "Veuillez entrer (seulement) une valeur numérique.",
+               creditcard: "Veuillez entrer un numéro de carte de crédit valide.",
+               equalTo: "Veuillez entrer une nouvelle fois la même valeur.",
+               accept: "Veuillez entrer une valeur avec une extension valide.",
+               maxlength: $.validator.format("Veuillez ne pas entrer plus de {0} caractères."),
+               minlength: $.validator.format("Veuillez entrer au moins {0} caractères."),
+               rangelength: $.validator.format("Veuillez entrer entre {0} et {1} caractères."),
+               range: $.validator.format("Veuillez entrer une valeur entre {0} et {1}."),
+               max: $.validator.format("Veuillez entrer une valeur inférieure ou égale à {0}."),
+               min: $.validator.format("Veuillez entrer une valeur supérieure ou égale à {0}.")
+           });}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 
 </body>
 

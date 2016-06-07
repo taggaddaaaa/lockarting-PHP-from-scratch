@@ -13,19 +13,19 @@ define("ROOT_JS", ROOT."../js/");
 define("ROOT_IMG", ROOT."../img/");
 
 // //connexion a la BDD de lockarting
-// $dataSource="mysql:host=lockartiiwblog.mysql.db;dbname=lockartiiwblog;charset=utf8";
-// $login="lockartiiwblog";
-// $mdp="Kartman34";
-// $connexion= new PDO($dataSource,$login,$mdp);
-// $connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
-
-// $connexion->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-//connexion a la BDD de localhost
-$dataSource="mysql:host=localhost;dbname=lockartiiwblog;charset=utf8";
-$login="root";
-$mdp="root";
+$dataSource="mysql:host=lockartiiwblog.mysql.db;dbname=lockartiiwblog;charset=utf8";
+$login="lockartiiwblog";
+$mdp="Kartman34";
 $connexion= new PDO($dataSource,$login,$mdp);
 $connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
 
 $connexion->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+// //connexion a la BDD de localhost
+// $dataSource="mysql:host=localhost;dbname=lockartiiwblog;charset=utf8";
+// $login="root";
+// $mdp="root";
+// $connexion= new PDO($dataSource,$login,$mdp);
+// $connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
+
+// $connexion->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);

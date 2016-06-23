@@ -8,10 +8,10 @@
 <img src="img/Sublime_Text.png">
 <img src="img/html5.png">
 <img src="img/js.png">
-<img src="img/CSS3.png">
+<img src="img/css3.png">
 <img src="img/jQurery.png">
 <img src="img/Boostrap.png">
-<img src="img/php.png">
+<img src="img/logo_php.png">
 <img src="img/mysql.png">
 <img src="img/weezent.png">
 <img src="img/ovh.jpg">

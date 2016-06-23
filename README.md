@@ -1,8 +1,18 @@
 # Lockarting
 
 > Vous pouvez retrouver mon code en ligne sur  http://www.lockarting.fr
-
-<img src="img/captureSiteWeb2.png">
+<style type="text/css">
+  .thumbnail:hover {
+      position:relative;
+      top:-25px;
+      left:-35px;
+      width:500px;
+      height:auto;
+      display:block;
+      z-index:999;
+}
+</style>
+<img class="thumbnail" src="img/captureSiteWeb2.png">
 
 ## Fait avec :
 <img src="img/Sublime_Text.png">

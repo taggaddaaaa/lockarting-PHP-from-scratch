@@ -2,7 +2,7 @@
 
 > Vous pouvez retrouver mon code en ligne sur  http://www.lockarting.fr
 
-<img style="display:center;" src="img/captureSiteWeb2.png">
+<img src="img/captureSiteWeb2.png">
 
 ## Fait avec :
 <img src="img/Sublime_Text.png">

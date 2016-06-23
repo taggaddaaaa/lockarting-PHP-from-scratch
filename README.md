@@ -2,13 +2,7 @@
 
 > Vous pouvez retrouver mon code en ligne sur  http://www.lockarting.fr
 
-<img style="hover:{position:relative;
-      top:-25px;
-      left:-35px;
-      width:500px;
-      height:auto;
-      display:block;
-      z-index:999;}" src="img/captureSiteWeb2.png">
+<img style="display:center;" src="img/captureSiteWeb2.png">
 
 ## Fait avec :
 <img src="img/Sublime_Text.png">

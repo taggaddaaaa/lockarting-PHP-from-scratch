@@ -14,7 +14,7 @@
 <img src="img/logo_php.png">
 <img src="img/mysql.png">
 <img src="img/weezent.png">
-<img src="img/ovh.jpg">
+<img src="img/ovh.png">
 <img src="img/mailchimp.png">
 
 ## Travail effectué

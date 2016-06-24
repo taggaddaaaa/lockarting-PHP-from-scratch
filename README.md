@@ -27,3 +27,6 @@
 ## Travail en cours
 * Refonte du blog avec mise en place de wordpress
 * Automatisation des posts entre Facebook et Wordpress grâce à IFTTT ou Zapier (a definir encore)
+
+## TO BE CONTINUED...
+![karting](http://i.giphy.com/iDE9bYGYHGm1a.gif)

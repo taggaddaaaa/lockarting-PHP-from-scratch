@@ -573,18 +573,18 @@ if(!empty($_POST))
 						<div class="row">
 							<div class="col-lg-8 col-lg-offset-2">
 								<div class="modal-body">
-                   <!-- CODE HORAIRES D'ETE
-                    <h2>Horaires d'été</h2>
-                    <p class="item-intro text-muted">Est-ce que votre circuit préféré est ouvert?</p>
-                    <img class="img-responsive img-centered" src="img/ete.jpg" alt="">
-                    <p>Le circuit est ouvert <strong>TOUS LES JOURS</strong> de <strong>10h à 01h00</strong> du matin.
-                    Nous sommes fermés en cas de météo ne permettant pas la pratique sur circuit.</p>
-                    <p>
+                 <!-- CODE HORAIRES D'ETE-->
+                 <h2>Horaires d'été</h2>
+                 <p class="item-intro text-muted">Est-ce que votre circuit préféré est ouvert?</p>
+                 <img class="img-responsive img-centered" src="img/ete.jpg" alt="">
+                 <p>Le circuit est ouvert <strong>TOUS LES JOURS</strong> de <strong>10h à 01h00</strong> du matin.
+                  Nous sommes fermés en cas de météo ne permettant pas la pratique sur circuit.</p>
+                  <p>
                     Il pleut des cordes? Vous voulez être <strong>certain</strong> de ne pas vous déplacer pour rien? Vous avez raison! <strong>Appelez-nous!</strong> <i class="fa fa-phone"> <a href="tel:0467170342" title="0467170342">04.67.17.03.42</a></i></p>
 
                     <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Retour</button> -->
 
-                    <!-- CODE HORAIRES D'HIVER-->
+                    <!-- CODE HORAIRES D'HIVER
                     <h2>Horaires d'hiver</h2>
                     <p class="item-intro text-muted">Est-ce que votre circuit préféré est ouvert?</p>
                     <img class="img-responsive img-centered" style="width: 20%" src="img/horloge.jpg" alt="">
@@ -601,7 +601,7 @@ if(!empty($_POST))
                   </div>
                 </div>
               </div>
-            </div>
+            </div>-->
 
             <!-- infos pratique modal VENIR -->
             <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
@@ -921,22 +921,22 @@ if(!empty($_POST))
 
             	<!-- Script to Activate the Carousel -->
             	<script>
-            		$('.carousel').carousel({
+              $('.carousel').carousel({
         interval: 3000 //changes the speed
       })
-    </script>
-    <!-- Script pour google analytics a inclure ds chaque page!!-->
-    <?php include_once("analyticstracking.php") ?>
+              </script>
+              <!-- Script pour google analytics a inclure ds chaque page!!-->
+              <?php include_once("analyticstracking.php") ?>
 
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+              <!-- Contact Form JavaScript -->
+              <script src="js/jqBootstrapValidation.js"></script>
+              <script src="js/contact_me.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/agency.js"></script>
+              <!-- Custom Theme JavaScript -->
+              <script src="js/agency.js"></script>
 
-    <!-- script mailchimp -->
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {
+              <!-- script mailchimp -->
+              <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {
              window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[4]='BIRTHD';ftypes[4]='birthday';fnames[3]='GENDER';ftypes[3]='radio';fnames[5]='MMERGE5';ftypes[5]='radio'; /*
             * Translated default messages for the $ validation plugin.
             * Locale: FR

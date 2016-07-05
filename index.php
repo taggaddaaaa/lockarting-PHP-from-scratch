@@ -72,7 +72,7 @@ if(!empty($_POST))
 	<meta property="og:url" content="http://www.lockarting.fr"/>
 	<meta property="og:image" content="DSC_8446.JPG"/>
 	<meta property="og:description" content="A partir de 7 ans, en famille, entre amis ou pilote solitaire, Venez défier le chrono sur le circuit mythique de Pérols. Nous accueillons également les entreprises, les enterrement de vie de garçon ou fille. Pour plus d'infos: wwww.lockarting.fr ">
-	<meta property="og:site_name" contact="www.lockarting.fr"/>
+	<meta property="og:site_name" content="www.lockarting.fr"/>
 
 	<!-- meta pour twitter -->
 	<meta name="twitter:site" content="@lockarting">
@@ -85,24 +85,42 @@ if(!empty($_POST))
 	<title>Loc'karting, circuit de karting de Pérols, près de Montpellier</title>
 
 	<!-- Bootstrap Core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- Latest compiled and minified CSS -->
+  <link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+  crossorigin="anonymous"
+  >
+  <!-- Optional theme -->
+  <link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+  integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+  crossorigin="anonymous"
+  >
 
-	<!-- Custom CSS -->
-	<link href="css/agency.css" rel="stylesheet">
 
-	<!-- Custom Fonts -->
-	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-	<link href="css/full-slider.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/agency.css" rel="stylesheet">
 
-	<!-- mailchimp -->
-	<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-	<!--logo dans la barre de navigation-->
-	<link href='img/logo.png' rel='shortcut icon'><link href='img/logo.png' rel='apple-touch-icon'>
+  <!-- Custom Fonts -->
+  <script src="https://use.fontawesome.com/dccc071aaa.js"></script>
+  <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <link href="css/full-slider.css" rel="stylesheet">
+
+  <!-- mailchimp -->
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+  <!--logo dans la barre de navigation-->
+  <link href='img/logo.png' rel='shortcut icon'>
+  <link href='img/logo.png' rel='apple-touch-icon'>
 
 </head>
 
@@ -122,7 +140,7 @@ if(!empty($_POST))
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand page-scroll" href="#page-top"><img style="width: 250px;" src="img/logo.png"></a>
+				<a class="navbar-brand page-scroll" href="#page-top"><img style="width: 250px;" src="img/logo.png" alt="logo de lockarting"></a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -318,7 +336,7 @@ if(!empty($_POST))
 										<h4 class="subheading"><?php echo $entry['dateArticle']; ?></h4>
 									</div>
 									<div class="timeline-body">
-										<a href="admin" class="text-muted"><?php echo substr($entry['description'], 0, 150); ?> ...</a>
+										<a href="admin/" class="text-muted"><?php echo substr($entry['description'], 0, 150); ?> ...</a>
 									</div>
 								</div>
 							</li>
@@ -830,7 +848,7 @@ if(!empty($_POST))
       Le webmaster est  : <strong>Sabine Caizergues</strong><br />
       Contactez le webmaster : <strong><a href="mailto:taggaddaaaa@outlook.com?subject=Contact à partir des mentions légales via le site www.lockarting.fr">taggaddaaaa@outlook.com</a></strong><br />
       L’hébergeur du site est : <strong>Ovh 2 rue Kellermann  59100  Roubaix</strong><br />
-      Crédits : Les mentions légales ont étés générées par <strong><a href="http://www.generer-mentions-legales.com">http://www.generer-mentions-legales.com</a></strong><br />
+      Crédits : Les mentions légales ont étés générées par <strong><a href="https://www.generer-mentions-legales.com">https://www.generer-mentions-legales.com</a></strong><br />
       <br />
       <br />
       <strong><font size="4">2. Conditions générales d’utilisation du site et des services proposés :</font></strong><br />
@@ -914,7 +932,13 @@ if(!empty($_POST))
 <script src="js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<!-- <script src="js/bootstrap.min.js"></script> -->
+<!-- Latest compiled and minified JavaScript -->
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+crossorigin="anonymous">
+</script>
 
 <!-- Plugin JavaScript -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>

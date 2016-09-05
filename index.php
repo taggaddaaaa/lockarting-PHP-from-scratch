@@ -542,7 +542,6 @@ if(!empty($_POST))
 								<div class="clearfix"></div>
 								<div class="col-lg-12 text-center">
 									<div id="success-mail"></div>
-									<div class="g-recaptcha" data-sitekey="your_site_key"></div>
 									<input type="submit" class="btn btn-xl" value="Envoi" />
 								</div>
 							</div>

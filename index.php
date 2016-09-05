@@ -39,15 +39,16 @@ if(!empty($_POST))
     //si $error est vide
 	if(empty($errors)){
 
-		$mailTitle = "[Formulaire de contact] nouvau message";
-		$mailDest = "sabinecaizergues@hotmail.com";
+		$mailTitle = "[Formulaire de contact] nouveau message";
+		4mailDest = 'lockarting-herault@wanadoo.fr' . ', ';
+		$mailDest .= "sabinecaizergues@hotmail.com";
 		$mailContent = "Bonjour,\n\nVous avez reçu un nouveau message via votre formulaire de contact : \n\n\n";
 		$mailContent .= "Auteur : ".$_POST["name"]."\n";
-		$mailContent .= "Email de contact : ".$_POST["email"]."\n";
-		$mailContent .= "Tel. de contact : ".$_POST["phone"]."\n\n\n";
-		$mailContent .= $_POST["message"];
+		$mailContent .= "Email du contact : ".$_POST["email"]."\n";
+		$mailContent .= "Tel. du contact : ".$_POST["phone"]."\n\n\n";
+		$mailContent .= "Message : \n\n".$_POST["message"];
 
-		mail($mailDest,$mailTitle,$mailContent);
+		mail($mailDest,$mailTitle, utf8_decode($mailContent));
 
 		$success = "Votre message a bien été envoyé.";
 	}
@@ -59,7 +60,7 @@ if(!empty($_POST))
 
 <head>
 
-	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -121,6 +122,9 @@ if(!empty($_POST))
   <!--logo dans la barre de navigation-->
   <link href='img/logo.png' rel='shortcut icon'>
   <link href='img/logo.png' rel='apple-touch-icon'>
+
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 
@@ -509,7 +513,7 @@ if(!empty($_POST))
 				</div>
 				<div class="row">
 					<div class="col-lg-12">
-						<form name="sentMessage" id="contactForm"  method="POST" action="/">
+						<form name="sentMessage" id="contactForm"  method="POST" action="verify.php">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
@@ -538,6 +542,7 @@ if(!empty($_POST))
 								<div class="clearfix"></div>
 								<div class="col-lg-12 text-center">
 									<div id="success-mail"></div>
+									<div class="g-recaptcha" data-sitekey="your_site_key"></div>
 									<input type="submit" class="btn btn-xl" value="Envoi" />
 								</div>
 							</div>

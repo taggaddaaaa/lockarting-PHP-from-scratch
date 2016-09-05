@@ -15,7 +15,7 @@ if(!empty($_POST))
 		array_push($errors, "veuillez saisir votre nom");
 	}
 
-    //si le nom est vide
+    //si le telephone est vide
 	if(empty($_POST["phone"])){
         // ajouter une erreur au tableau $error
 		array_push($errors, "veuillez rentrer votre téléphone");
@@ -30,7 +30,7 @@ if(!empty($_POST))
 		array_push($errors, "email non valide");
 	}
 
-    // si le mdp est vide
+    // si le message est vide
 	if(empty($_POST["message"])){
         // ajouter une erreur au tableau
 		array_push($errors, "veuillez rentrer un message");
@@ -40,7 +40,7 @@ if(!empty($_POST))
 	if(empty($errors)){
 
 		$mailTitle = "[Formulaire de contact] nouveau message";
-		4mailDest = 'lockarting-herault@wanadoo.fr' . ', ';
+		$mailDest = 'lockarting-herault@wanadoo.fr' . ', ';
 		$mailDest .= "sabinecaizergues@hotmail.com";
 		$mailContent = "Bonjour,\n\nVous avez reçu un nouveau message via votre formulaire de contact : \n\n\n";
 		$mailContent .= "Auteur : ".$_POST["name"]."\n";

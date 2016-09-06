@@ -23,10 +23,13 @@
 * Blog
 * Mise en place d'une solution de vente de billeterie en ligne avec un widget weezevent
 * Gestion des newsletter avec Mailchimp
+* Refonte du blog avec mise en place de wordpress
+* Automatisation des posts entre Facebook et Wordpress grâce à IFTTT
 
 ## Travail en cours
-* Refonte du blog avec mise en place de wordpress
-* Automatisation des posts entre Facebook et Wordpress grâce à IFTTT ou Zapier (a definir encore)
+* Implementer un captcha pour eviter les spams sur le form de contact.
+* Revoir les conditions d'erreurs avec style de bootstrap.
+* Refonte en Js pour le fun dans un autre repo
 
 ## TO BE CONTINUED...
 ![karting](http://i.giphy.com/iDE9bYGYHGm1a.gif)

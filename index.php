@@ -39,16 +39,19 @@ if(!empty($_POST))
     //si $error est vide
 	if(empty($errors)){
 
-		$mailTitle = "[Formulaire de contact] nouveau message";
-		$mailDest = 'lockarting-herault@wanadoo.fr' . ', ';
-		$mailDest .= "sabinecaizergues@hotmail.com";
+		
+		$mailTitle = "[Formulaire de contact] www.lockarting.fr";
+		$mailDest = "contact@lockarting.fr" . ", ";
+		$mailDest .= "sabinecaizergues@hotmail.com" . ", ";
+		$mailDest .= "lockarting.accueil@icloud.com";
 		$mailContent = "Bonjour,\n\nVous avez reçu un nouveau message via votre formulaire de contact : \n\n\n";
 		$mailContent .= "Auteur : ".$_POST["name"]."\n";
 		$mailContent .= "Email du contact : ".$_POST["email"]."\n";
 		$mailContent .= "Tel. du contact : ".$_POST["phone"]."\n\n\n";
 		$mailContent .= "Message : \n\n".$_POST["message"];
+                $headers = "From : ".$_POST["email"]."\r\n" . "Reply-To: ".$_POST["email"]."\r\n" . "X-Mailer: PHP/" . phpversion();
 
-		mail($mailDest,$mailTitle, utf8_decode($mailContent));
+                mail($mailDest,$mailTitle, utf8_decode($mailContent), $headers);
 
 		$success = "Votre message a bien été envoyé.";
 	}
@@ -94,14 +97,14 @@ if(!empty($_POST))
   integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
   crossorigin="anonymous"
   >
-  <!-- Optional theme -->
+  <!-- Optional theme 
   <link
   rel="stylesheet"
   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
   integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
   crossorigin="anonymous"
   >
-
+-->
 
 
   <!-- Custom CSS -->
@@ -270,8 +273,8 @@ if(!empty($_POST))
 								<i class="fa fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img src="img/ouvert.jpg" class="img-responsive" alt="panneau d'heure d'ouverture">
-					</a>
+						<img src="img/ouvert.jpg" class="img-responsive" style="width: 360px; height: 225px;" alt="panneau d'heure d'ouverture">
+                    </a>
 					<div class="portfolio-caption">
 						<h4>Horaires</h4>
 						<p class="text-muted">Ouvert, pas ouvert?</p>
@@ -340,7 +343,7 @@ if(!empty($_POST))
 										<h4 class="subheading"><?php echo $entry['dateArticle']; ?></h4>
 									</div>
 									<div class="timeline-body">
-										<a href="admin/" class="text-muted"><?php echo substr($entry['description'], 0, 150); ?> ...</a>
+										<a href="/blog" target="_blank" class="text-muted"><?php echo substr($entry['description'], 0, 150); ?> ...</a>
 									</div>
 								</div>
 							</li>
@@ -611,14 +614,14 @@ if(!empty($_POST))
                     <h2>Horaires d'hiver</h2>
                     <p class="item-intro text-muted">Est-ce que votre circuit préféré est ouvert?</p>
                     <img class="img-responsive img-centered" style="width: 20%" src="img/horloge.jpg" alt="">
-                    <p>Le circuit est ouvert <strong>du MERCREDI au VENDREDI de 14h00 à 18h30 et le week-end de 10h00 à 19h00.</strong> </br>
-                    	Pendant les <strong> vacances scolaires</strong>, nous sommes ouverts <strong> tous les jours de 14h00 à 18h30</strong>.</br>
+                    <p>Le circuit est ouvert <strong>du MERCREDI au DIMANCHE de 14h00 à 18h00.</strong> </br>
+                    	Pendant les <strong> vacances scolaires</strong>, nous sommes ouverts <strong> tous les jours de 14h00 à 18h00</strong>.</br>
                     	Nous sommes fermés au mois de janvier pour nos congés annuels. </br>
                     	Nous sommes fermés en cas de météo ne permettant pas la pratique sur circuit.</p>
                     <p><strong>Vous êtes perdu? Il pleut des cordes? Vous voulez être certain de ne pas vous déplacer pour rien?</strong>Vous avez raison! Appelez-nous! <i class="fa fa-phone"> 04.67.17.03.42</i></p>
 
                     <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Retour</button>
-
+                  
                 </div>
 
               </div>
@@ -770,14 +773,14 @@ if(!empty($_POST))
   <tr>
     <td>Tarifs</td>
 
-    <td>48,00€/pers</td>
-    <td>45,00€/pers</td>
+    <td>48,00?/pers</td>
+    <td>45,00?/pers</td>
 
-    <td>57,00€/pers</td>
-    <td>54,00€/pers</td>
+    <td>57,00?/pers</td>
+    <td>54,00?/pers</td>
 
-    <td>63,00€/pers</td>
-    <td>59,00€/pers</td>
+    <td>63,00?/pers</td>
+    <td>59,00?/pers</td>
 
     <td>30,00 &#8364;/enfant</td>
 
@@ -801,7 +804,7 @@ if(!empty($_POST))
 </div>
 <p><bold>Pour la FORMULE ANNIVERSAIRE</bold> : nous prenons les réservations par téléphone ou mail A PARTIR DE 6 PARTICIPANTS minimum.
  La formule anniversaire comprend bien sûr du karting! : 2x 10minutes de karting 120CC ainsi qu'un gâteau, des bonbons, des boissons, la remise des diplômes de pilote de karting pour chaque enfant sur le podium
- et une médaille pour la star de la journée! 30€/enfant.</p>
+ et une médaille pour la star de la journée! 30?/enfant.</p>
 </br>
 <p>Pour un tarif de groupe de plus de 14 personnes, CE, accueil d'entreprise, EDV de jeune fille ou garçon, veuillez-nous faire une demande<a href="#contact"> ICI</a> et fermez cette fenêtre.</p>
 
@@ -839,7 +842,7 @@ if(!empty($_POST))
       Nom de la société :<strong> Loc'karting</strong><br />
       Adresse : <strong>RD 172, Lieu dit la Pailletrice,  34470  Pérols</strong><br />
       Tél  : <strong>04.67.17.03.42</strong><br />
-      Au capital de :<strong> 5000 €</strong><br />
+      Au capital de :<strong> 5000 ?</strong><br />
       SIRET :  <strong>52805443000020   </strong>R.C.S. :<strong> 528054430 RCS Montpellier</strong><br />
       Numéro TVA intracommunautaire : <strong>FR42528054430</strong><br />
       Adresse de courrier électronique : <strong>lockarting-herault@orange.fr</strong> <br />
@@ -851,61 +854,61 @@ if(!empty($_POST))
       <br />
       Le webmaster est  : <strong>Sabine Caizergues</strong><br />
       Contactez le webmaster : <strong><a href="mailto:taggaddaaaa@outlook.com?subject=Contact à partir des mentions légales via le site www.lockarting.fr">taggaddaaaa@outlook.com</a></strong><br />
-      L’hébergeur du site est : <strong>Ovh 2 rue Kellermann  59100  Roubaix</strong><br />
+      L?hébergeur du site est : <strong>Ovh 2 rue Kellermann  59100  Roubaix</strong><br />
       Crédits : Les mentions légales ont étés générées par <strong><a href="https://www.generer-mentions-legales.com">https://www.generer-mentions-legales.com</a></strong><br />
       <br />
       <br />
-      <strong><font size="4">2. Conditions générales d’utilisation du site et des services proposés :</font></strong><br />
+      <strong><font size="4">2. Conditions générales d?utilisation du site et des services proposés :</font></strong><br />
       <br />
-      L’utilisation du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> implique l’acceptation pleine et entière des conditions générales d’utilisation  décrites ci-après. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, sans préavis, aussi les utilisateurs du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> sont  invités à les consulter de manière régulière.<br />
-      <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> est par principe accessible aux utilisateurs 24/24h, 7/7j, sauf interruption, programmée ou non, pour les besoins de sa maintenance ou cas de force majeure. En cas d’impossibilité d’accès au service, <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> s’engage à faire son maximum afin de rétablir l’accès au service et s’efforcera alors de communiquer préalablement aux utilisateurs les dates et heures de l’intervention.  N’étant soumis qu’à une obligation de moyen, <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> ne saurait être tenu pour responsable de tout dommage, quelle qu’en soit la nature, résultant d’une indisponibilité du service.
+      L?utilisation du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> implique l?acceptation pleine et entière des conditions générales d?utilisation  décrites ci-après. Ces conditions d?utilisation sont susceptibles d?être modifiées ou complétées à tout moment, sans préavis, aussi les utilisateurs du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> sont  invités à les consulter de manière régulière.<br />
+      <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> est par principe accessible aux utilisateurs 24/24h, 7/7j, sauf interruption, programmée ou non, pour les besoins de sa maintenance ou cas de force majeure. En cas d?impossibilité d?accès au service, <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> s?engage à faire son maximum afin de rétablir l?accès au service et s?efforcera alors de communiquer préalablement aux utilisateurs les dates et heures de l?intervention.  N?étant soumis qu?à une obligation de moyen, <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> ne saurait être tenu pour responsable de tout dommage, quelle qu?en soit la nature, résultant d?une indisponibilité du service.
     </p>
     <p style="text-align: justify">
-      Le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> est mis à jour régulièrement par le propriétaire du site. De la même façon, les mentions légales peuvent être modifiées à tout moment, sans préavis, et s’imposent à l’utilisateur sans réserve. L’utilisateur est réputé les accepter sans réserve et s’y référer régulièrement pour prendre connaissance des modifications.<br />
-      Le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> se réserve aussi le droit de céder, transférer, ce sans préavis les droits et/ou obligations des présentes CGU et mentions légales. En continuant à utiliser les services du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> , l’utilisateur reconnaît accepter les modifications des conditions générales qui seraient intervenues.<br />
+      Le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> est mis à jour régulièrement par le propriétaire du site. De la même façon, les mentions légales peuvent être modifiées à tout moment, sans préavis, et s?imposent à l?utilisateur sans réserve. L?utilisateur est réputé les accepter sans réserve et s?y référer régulièrement pour prendre connaissance des modifications.<br />
+      Le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> se réserve aussi le droit de céder, transférer, ce sans préavis les droits et/ou obligations des présentes CGU et mentions légales. En continuant à utiliser les services du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> , l?utilisateur reconnaît accepter les modifications des conditions générales qui seraient intervenues.<br />
     </p>
     <p style="text-align: justify">
       <strong><font size="4">3. Description des services fournis :</font></strong><br />
       <br />
-      Le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> a pour objet de fournir une information concernant l’ensemble des activités de la société.<br />
-      Le propriétaire du site s’efforce de fournir sur le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> des informations aussi précises que possible. Toutefois, il ne pourra être tenu responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.<br />
-      Tous les informations proposées sur le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> sont données à titre indicatif, sont non exhaustives, et sont susceptibles d’évoluer. Elles sont données sous réserve de modifications ayant été apportées depuis leur mise en ligne.<br />
+      Le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> a pour objet de fournir une information concernant l?ensemble des activités de la société.<br />
+      Le propriétaire du site s?efforce de fournir sur le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> des informations aussi précises que possible. Toutefois, il ne pourra être tenu responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu?elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.<br />
+      Tous les informations proposées sur le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> sont données à titre indicatif, sont non exhaustives, et sont susceptibles d?évoluer. Elles sont données sous réserve de modifications ayant été apportées depuis leur mise en ligne.<br />
     </p>
     <p style="text-align: justify">
       <strong><font size="4">4. Limites de responsabilité :</font></strong><br />
       <br />
       Le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> utilise la technologie java script.<br />
-      Le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> ne saurait être tenu responsable des erreurs typographiques ou inexactitudes apparaissant sur le service, ou de quelque dommage subi résultant de son utilisation. L’utilisateur reste responsable de son équipement et de son utilisation, de même il supporte seul les coûts directs ou indirects suite à sa connexion à Internet.<br />
+      Le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> ne saurait être tenu responsable des erreurs typographiques ou inexactitudes apparaissant sur le service, ou de quelque dommage subi résultant de son utilisation. L?utilisateur reste responsable de son équipement et de son utilisation, de même il supporte seul les coûts directs ou indirects suite à sa connexion à Internet.<br />
       <br />
-      L’utilisateur du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> s’engage à accéder à celui-ci en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mise à jour.<br />
+      L?utilisateur du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> s?engage à accéder à celui-ci en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mise à jour.<br />
       <br />
-      L’utilisateur dégage la responsabilité de <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> pour tout préjudice qu’il pourrait subir ou faire subir, directement ou indirectement, du fait des services proposés. Seule la responsabilité de l’utilisateur est engagée par l’utilisation du service proposé et celui-ci dégage expressément le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> de toute responsabilité vis-à-vis de tiers.<br />
-      Des espaces interactifs (possibilité de poser des questions dans l’espace contact) sont à la disposition des utilisateurs. Le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, le propriétaire du site se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, homophobe, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie…).<br />
-      Il est ici rappelé que les développeurs du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> gardent trace de l'adresse mail, et de l'adresse IP de l'utilisateur. En conséquence, il doit être conscient qu'en cas d'injonction de l’autorité judiciaire il peut être retrouvé et poursuivi.<br />
+      L?utilisateur dégage la responsabilité de <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> pour tout préjudice qu?il pourrait subir ou faire subir, directement ou indirectement, du fait des services proposés. Seule la responsabilité de l?utilisateur est engagée par l?utilisation du service proposé et celui-ci dégage expressément le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> de toute responsabilité vis-à-vis de tiers.<br />
+      Des espaces interactifs (possibilité de poser des questions dans l?espace contact) sont à la disposition des utilisateurs. Le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, le propriétaire du site se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l?utilisateur, notamment en cas de message à caractère raciste, homophobe, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie?).<br />
+      Il est ici rappelé que les développeurs du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> gardent trace de l'adresse mail, et de l'adresse IP de l'utilisateur. En conséquence, il doit être conscient qu'en cas d'injonction de l?autorité judiciaire il peut être retrouvé et poursuivi.<br />
     </p>
     <p style="text-align: justify">
       <strong><font size="4">5. Propriété intellectuelle et contrefaçons :</font></strong><br />
       <br />
-      Le propriétaire du site est propriétaire des droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site, notamment les textes, images, graphismes, logos, icônes, sons, logiciels…<br />
+      Le propriétaire du site est propriétaire des droits de propriété intellectuelle ou détient les droits d?usage sur tous les éléments accessibles sur le site, notamment les textes, images, graphismes, logos, icônes, sons, logiciels?<br />
       Toute reproduction, représentation, modification, publication, adaptation totale ou partielle des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable à l'Email : <a href="mailto:taggaddaaaa@outlook.com?subject=Contact à partir des mentions légales via le site www.lockarting.fr"><strong>taggaddaaaa@outlook.com</strong></a> .<br />
-      Toute exploitation non autorisée du site ou d'un quelconque des éléments qu’il contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.<br />
+      Toute exploitation non autorisée du site ou d'un quelconque des éléments qu?il contient sera considérée comme constitutive d?une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.<br />
     </p>
     <p style="text-align: justify">
       <strong><font size="4">6. Liens hypertextes et cookies :</font></strong><br />
       <br />
-      Le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> contient un certain nombre de liens hypertextes vers d’autres sites (partenaires, informations …) mis en place avec l’autorisation du propriétaire du site . Cependant, le propriétaire du site n’a pas la possibilité de vérifier le contenu des sites ainsi visités  et décline donc toute responsabilité de ce fait quand aux risques éventuels de contenus illicites.<br />
+      Le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> contient un certain nombre de liens hypertextes vers d?autres sites (partenaires, informations ?) mis en place avec l?autorisation du propriétaire du site . Cependant, le propriétaire du site n?a pas la possibilité de vérifier le contenu des sites ainsi visités  et décline donc toute responsabilité de ce fait quand aux risques éventuels de contenus illicites.<br />
       <br />
-      L’utilisateur est informé que lors de ses visites sur le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a>, un ou des cookies sont susceptibles de s’installer automatiquement sur son ordinateur. Un cookie est un fichier de petite taille, qui ne permet pas l’identification de l’utilisateur, mais qui enregistre des informations relatives à la navigation d’un ordinateur sur un site. Les données ainsi obtenues visent à faciliter la navigation ultérieure sur le site, et ont également vocation à permettre diverses mesures de fréquentation.<br />
+      L?utilisateur est informé que lors de ses visites sur le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a>, un ou des cookies sont susceptibles de s?installer automatiquement sur son ordinateur. Un cookie est un fichier de petite taille, qui ne permet pas l?identification de l?utilisateur, mais qui enregistre des informations relatives à la navigation d?un ordinateur sur un site. Les données ainsi obtenues visent à faciliter la navigation ultérieure sur le site, et ont également vocation à permettre diverses mesures de fréquentation.<br />
       <br />
-      Le paramétrage du logiciel de navigation permet d’informer de la présence de cookies et éventuellement, de la refuser de la manière décrite à l’adresse suivante : www.cnil.fr<br />
-      Le refus d’installation d’un cookie peut entraîner l’impossibilité d’accéder à certains services. L’utilisateur peut toutefois configurer son ordinateur de la manière suivante, pour refuser l’installation des cookies :<br />
+      Le paramétrage du logiciel de navigation permet d?informer de la présence de cookies et éventuellement, de la refuser de la manière décrite à l?adresse suivante : www.cnil.fr<br />
+      Le refus d?installation d?un cookie peut entraîner l?impossibilité d?accéder à certains services. L?utilisateur peut toutefois configurer son ordinateur de la manière suivante, pour refuser l?installation des cookies :<br />
       Sous Internet Explorer : Onglet outil / options internet. Cliquez sur Confidentialité et choisissez Bloquer tous les cookies. Validez sur Ok.<br />
       Sous Netscape : Onglet édition / préférences. Cliquez sur Avancées et choisissez Désactiver les cookies. Validez sur Ok.<br />
     </p>
     <p style="text-align: justify">
       <strong><font size="4">7. Droit applicable et attribution de juridiction :</font></strong><br />
       <br />
-      Tout litige en relation avec l’utilisation du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> est soumis au droit français. L’utilisateur ainsi que <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> acceptent de se soumettre à la compétence exclusive des tribunaux français en cas de litige.<br />
+      Tout litige en relation avec l?utilisation du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> est soumis au droit français. L?utilisateur ainsi que <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> acceptent de se soumettre à la compétence exclusive des tribunaux français en cas de litige.<br />
     </p>
     <p style="text-align: justify">
       <strong><font size="4">8. Protection des biens et des personnes - gestion des données personnelles :</font></strong><br />
@@ -914,8 +917,8 @@ if(!empty($_POST))
       En France, les données personnelles sont notamment protégées par la loi n° 78-87 du 6 janvier 1978, la loi n° 2004-801 du 6 août 2004, l'article L. 226-13 du Code pénal et la Directive Européenne du 24 octobre 1995.
     </p>
     <p style="text-align: justify">
-      Sur le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a>, le propriétaire du site ne collecte des informations personnelles relatives à l'utilisateur que pour le besoin de certains services proposés par le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a>. L'utilisateur fournit ces informations en toute connaissance de cause, notamment lorsqu'il procède par lui-même à leur saisie. Il est alors précisé à l'utilisateur du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> l’obligation ou non de fournir ces informations.<br />
-      Conformément aux dispositions des articles 38 et suivants de la loi 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, tout utilisateur dispose d’un droit d’accès, de rectification, de suppression et d’opposition aux données personnelles le concernant. Pour l’exercer, adressez votre demande à <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> par Email au webmaster, ou faites une demande écrite et signée, accompagnée d’une copie du titre d’identité avec signature du titulaire de la pièce, en précisant l’adresse à laquelle la réponse doit être envoyée.
+      Sur le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a>, le propriétaire du site ne collecte des informations personnelles relatives à l'utilisateur que pour le besoin de certains services proposés par le site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a>. L'utilisateur fournit ces informations en toute connaissance de cause, notamment lorsqu'il procède par lui-même à leur saisie. Il est alors précisé à l'utilisateur du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> l?obligation ou non de fournir ces informations.<br />
+      Conformément aux dispositions des articles 38 et suivants de la loi 78-17 du 6 janvier 1978 relative à l?informatique, aux fichiers et aux libertés, tout utilisateur dispose d?un droit d?accès, de rectification, de suppression et d?opposition aux données personnelles le concernant. Pour l?exercer, adressez votre demande à <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> par Email au webmaster, ou faites une demande écrite et signée, accompagnée d?une copie du titre d?identité avec signature du titulaire de la pièce, en précisant l?adresse à laquelle la réponse doit être envoyée.
     </p>
     <p style="text-align: justify">
       Aucune information personnelle de l'utilisateur du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> n'est publiée à l'insu de l'utilisateur, échangée, transférée, cédée ou vendue sur un support quelconque à des tiers. Seule l'hypothèse du rachat du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a> au propriétaire du site et de ses droits permettrait la transmission des dites informations à l'éventuel acquéreur qui serait à son tour tenu de la même obligation de conservation et de modification des données vis-à-vis de l'utilisateur du site <a href="http://www.lockarting.fr" target="_blank">www.lockarting.fr</a>.<br />
@@ -994,3 +997,4 @@ $('.carousel').carousel({
           </body>
 
           </html>
+			
